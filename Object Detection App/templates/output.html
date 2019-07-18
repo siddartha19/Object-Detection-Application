@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Output</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+</head>
+<body>
+
+
+  <div class="text-center">
+    <img style="margin-top: 20px; border: 5px solid black; border-radius: 20px;" data-image="red" class="active" src="{{ imgval }}" alt="">
+  </div>
+
+<div style="margin-left: 45%; margin-top: 2%;">
+	<a href="{{url_for('home') }}">
+		<button type="button" class="btn btn-primary">Home</button>
+	</a>
+	<a href="{{url_for('Camera')}}">
+		<button type="button" class="btn btn-success">Take Another</button>
+	</a>
+</div> 
+
+
+
+</body>
+</html>

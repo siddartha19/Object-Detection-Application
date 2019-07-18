@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+
+		#loader-5 #loader{
+			position: absolute;
+			top:45%;
+			left: 50%;
+			z-index: 2;
+			background: #fff;
+			height: 0.4vw;
+			width: 2.4vw;
+			margin:0.4vw;
+			-webkit-animation: shm 1.15s 0s infinite ease-in-out;
+			-moz-animation: shm 1.15s 0s infinite ease-in-out;
+			-o-animation: shm 1.15s 0s infinite ease-in-out;
+			animation: shm 1.15s infinite ease-in-out;
+		}
+
+
+		#loader-5 #loader:before{
+			content: "";
+			position: absolute;
+			background: #fff;
+			top:-20px;
+			left:-0.5vw;
+			height: 0.4vw;
+			width: 2.4vw;
+			margin:0.4vw;
+			-webkit-animation: glide 1.15s 0s infinite ease-in-out;
+			-moz-animation: glide 1.15s 0s infinite ease-in-out;
+			-o-animation: glide 1.15s 0s infinite ease-in-out;
+				animation: glide 1.15s 0s infinite ease-in-out;
+		}
+
+
+		#loader-5 #loader:after{
+			background: #fff;
+			content: "";
+			position: absolute;
+			bottom: -20px;
+			left:-0.5vw;
+			height: 0.4vw;
+			width: 2.4vw;
+			margin:0.4vw;
+			-webkit-animation: glide 1.15s 0s infinite ease-in-out reverse;
+			-moz-animation: glide 1.15s 0s infinite ease-in-out;
+			-o-animation: glide 1.15s 0s infinite ease-in-out;
+				animation: glide 1.15s 0s infinite ease-in-out reverse;
+		}
+
+
+		/*keyframes shm and glide */
+
+
+		@-webkit-keyframes shm {
+			0%{ 
+				transform:translateX(50px);
+			}
+			50%{ 
+				transform:translateX(-50px);
+			}
+			100%{ 
+				transform:translateX(50px);
+			}
+		}
+
+		@-moz-keyframes shm {
+			0%{ 
+				transform:translateX(50px);
+			}
+			50%{ 
+				transform:translateX(-50px);
+			}
+			100%{ 
+				transform:translateX(50px);
+			}
+		}
+
+
+		@-o-keyframes shm {
+			0%{ 
+				transform:translateX(50px);
+			}
+			50%{ 
+				transform:translateX(-50px);
+			}
+			100%{ 
+				transform:translateX(50px);
+			}
+		}
+
+		@keyframes shm {
+			0%{ 
+				transform:translateX(50px);
+			}
+			50%{ 
+				transform:translateX(-50px);
+			}
+			100%{ 
+				transform:translateX(50px);
+			}
+		}
+
+		@-webkit-keyframes glide {
+			0%{ 
+				transform:rotate(0deg);
+			}
+			50%{ 
+				transform:rotate(180deg);
+			}
+			100%{ 
+				transform:rotate(360deg);
+			}
+		}
+
+
+		@-moz-keyframes glide {
+			0%{ 
+				transform:rotate(0deg);
+			}
+			50%{ 
+				transform:rotate(180deg);
+			}
+			100%{ 
+				transform:rotate(360deg);
+			}
+		}
+
+
+		@-o-keyframes glide {
+			0%{ 
+				transform:rotate(0deg);
+			}
+			50%{ 
+				transform:rotate(180deg);
+			}
+			100%{ 
+				transform:rotate(360deg);
+			}
+		}
+
+
+		@keyframes glide {
+			0%{ 
+				transform:rotate(0deg);
+			}
+			50%{ 
+				transform:rotate(180deg);
+			}
+			100%{ 
+				transform:rotate(360deg);
+			}
+		}
+
+	</style>
+</head>
+
+
+<body style="background-color: rgba(0,0,0,1);">
+
+    <div class="loader-wrapper" id="loader-5">
+        <div id="loader"></div>
+    </div>
+
+    <script>
+	    loaders = document.getElementsByClassName('loader-wrapper');
+	    loaders[0].style.display = "inherit";
+
+	    function change(self) {
+	        for (var i = loaders.length - 1; i >= 0; i--) {
+	            loaders[i].style.display = "none";
+	        }
+	        id = self.id;
+	        loaders[id - 1].style.display = "inherit";
+	    };
+	    setTimeout(function() {
+          window.location.href = "/output";
+         }, 1000);
+    </script>
+
+</body>
+</html>
